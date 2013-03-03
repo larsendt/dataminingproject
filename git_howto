@@ -1,0 +1,24 @@
+# example git workflow
+
+# create file blah.txt, edit it
+
+# now add the file to git for the first time
+git add blah.txt
+
+# commit the file
+git commit -m "this is the first commit message for blah.txt"
+
+# pull before pushing in case someone else has edited it
+# if this results in a merge conflict, send me an email
+# I don't think it will be a problem though, if we coordinate properly
+git pull
+
+# push the file to github
+git push
+
+# make another edit in blah.txt
+
+# add the file again (this is called "staging" the file)
+git add blah.txt
+
+# commit/pull/push as usual
