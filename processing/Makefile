@@ -1,7 +1,11 @@
-CFLAGS = -g -Wall -Wextra
+CC = clang
+CFLAGS = -g -Wall -Wextra -std=c99
 LIBS = -lz
 
-all: unique_count
+all: rate_of_change
 
-unique_count: unique_count.c
-	$(CC) $(CFLAGS) unique_count.c -o unique_count $(LIBS)
+rate_of_change: rate_of_change.c
+	$(CC) $(CFLAGS) rate_of_change.c hashtable.c murmur.c -o rate_of_change $(LIBS)
+
+clean:
+	rm -f rate_of_change
